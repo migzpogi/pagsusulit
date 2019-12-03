@@ -4,11 +4,11 @@ class Dagdag(object):
     """
 
     @staticmethod
-    def add_two_integers(first_int, second_int):
+    def add_two_numbers(first_int, second_int):
         """
         Gets the sum of two integers
-        :param int first_int: First number to be added
-        :param int second_int: Second number to be added
+        :param first_int: First number to be added
+        :param second_int: Second number to be added
         :return int: Sum of first_int and second_int
         """
 
