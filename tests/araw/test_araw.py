@@ -4,9 +4,6 @@ import unittest
 
 class TestAraw(unittest.TestCase):
 
-    def test_foo(self):
-        self.assertEqual(1, Araw().foo())
-
     def test_number_of_days_leap(self):
         self.assertEqual(366, Araw().get_number_of_days(2020))
         self.assertEqual(366, Araw().get_number_of_days(2000))
@@ -21,6 +18,17 @@ class TestAraw(unittest.TestCase):
         self.assertEqual(365, Araw().get_number_of_days(2300))
         self.assertEqual(365, Araw().get_number_of_days(2500))
 
+    def test_days_to_year_ratio(self):
+        self.assertEqual(0.27, Araw().days_to_year_ratio(1, 2019))
+        self.assertEqual(0.27, Araw().days_to_year_ratio(1, 2020))
+
+    def test_accuracy(self):
+        self.assertEqual(99.73, Araw().accuracy(1, 2019))
+        self.assertEqual(99.73, Araw().accuracy(1, 2020))
+
+    def test_once(self):
+        self.assertEqual(99.73, Araw().accuracy(1, 2019))
+        self.assertEqual(99.73, Araw().accuracy(1, 2020))
 
 
 if __name__ == '__main__':
