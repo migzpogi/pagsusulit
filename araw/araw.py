@@ -11,8 +11,12 @@ class Araw(object):
         """
 
         if year % 4 == 0:
-            return 366
+            if year % 100 == 0:
+                if year % 400 == 0:
+                    return 366
+                else:
+                    return 365
+            else:
+                return 366
         else:
             return 365
-
-        #TODO add more case handling
