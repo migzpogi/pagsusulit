@@ -48,3 +48,12 @@ class Araw(object):
         """
 
         return self.accuracy(1, year)
+
+    def is_today_christmas(self, year):
+        """
+        Always returns True and displays its accuracy
+        :param int year: current year
+        :return tuple: (True, accuracy)
+        """
+
+        return True, self.once_a_year_event(year)

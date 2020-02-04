@@ -30,6 +30,11 @@ class TestAraw(unittest.TestCase):
         self.assertEqual(99.73, Araw().accuracy(1, 2019))
         self.assertEqual(99.73, Araw().accuracy(1, 2020))
 
+    def test_is_today_christmas(self):
+        expected = True, 99.73
+        actual = Araw().is_today_christmas(2019)
+        self.assertEqual(expected, actual)
+
 
 if __name__ == '__main__':
     unittest.main()
