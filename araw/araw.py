@@ -51,9 +51,9 @@ class Araw(object):
 
     def is_today_christmas(self, year):
         """
-        Always returns True and displays its accuracy
+        Always returns False and displays its accuracy
         :param int year: current year
         :return tuple: (True, accuracy)
         """
 
-        return True, self.once_a_year_event(year)
+        return False, self.once_a_year_event(year)
